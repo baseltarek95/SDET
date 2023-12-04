@@ -1,0 +1,25 @@
+{
+  "name": "siemens_project_q1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "test:ui": "nightwatch"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "geckodriver": "^4.2.1",
+    "nightwatch": "^3.3.2",
+    "nightwatch-html-reporter": "^2.0.6"
+  },
+  "dependencies": {
+    "chromedriver": "^119.0.1"
+  }
+  
+  
+  }
+  
+
