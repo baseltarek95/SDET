@@ -1,4 +1,5 @@
 version: 2.1
+
 jobs:
   test:
     docker:
@@ -10,20 +11,16 @@ jobs:
       - run:
           name: Pull Docker image
           command: docker pull circleci/node:19.4
-    steps:
       - checkout
       - run:
           name: Install Dependencies
           command: npm install
-
       - run:
           name: Run UI Tests
           command: npm run test:ui
-          
       - store_artifacts:
           path: reports
           destination: reports
-
       - store_test_results:
           path: reports
 
