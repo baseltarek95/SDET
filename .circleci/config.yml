@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:latest  # Use the latest version
+      - image: circleci/node:latest
 
     working_directory: ui-tests/tests
 
@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Create Directory and Adjust Permissions
           command: |
-            mkdir -p /home/circleci/SDET.git
-            chmod 0700 /home/circleci/SDET.git
-            ls -ld /home/circleci  # Optional: Display permissions for debugging
+            mkdir -p SDET.git
+            chmod 0700 SDET.git
+            ls -ld SDET.git  # Optional: Display permissions for debugging
 
       - run:
           name: Install Dependencies
