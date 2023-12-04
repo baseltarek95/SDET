@@ -10,12 +10,6 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
-      
-      - run:
-          name: Adjust Permissions
-          command: |
-            sudo chmod +w https://github.com/baseltarek95/
-            sudo mkdir git@github.com:baseltarek95/SDET.git
 
       - run:
           name: Install Dependencies
