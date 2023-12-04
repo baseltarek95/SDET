@@ -15,7 +15,7 @@ jobs:
           name: Adjust Permissions
           command: |
             sudo chmod +w https://github.com/baseltarek95/
-            sudo mkdir https://github.com/baseltarek95/SDET.git
+            sudo mkdir git@github.com:baseltarek95/SDET.git
 
       - run:
           name: Install Dependencies
