@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: circleci/node:latest  # Use the latest version
 
+ working_directory: ui-tests/tests
     steps:
       - setup_remote_docker
       - checkout
