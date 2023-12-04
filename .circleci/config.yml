@@ -10,11 +10,12 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
+      
       - run:
           name: Adjust Permissions
           command: |
-            sudo chmod -R 755 /home/circleci
-            sudo chown -R circleci:circleci /home/circleci
+            sudo chmod +w https://github.com/baseltarek95/
+            sudo mkdir /path/to/parent/directory/SDET.git
 
       - run:
           name: Create Directory
