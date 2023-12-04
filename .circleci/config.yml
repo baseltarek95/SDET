@@ -10,6 +10,11 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
+      - run:
+          name: Adjust Permissions
+          command: |
+            sudo chmod -R 755 /home/circleci
+            sudo chown -R circleci:circleci /home/circleci
 
       - run:
           name: Create Directory
