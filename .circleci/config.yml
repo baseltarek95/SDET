@@ -12,10 +12,11 @@ jobs:
       - checkout
 
       - run:
-          name: Create Directory
+          name: Create Directory and Adjust Permissions
           command: |
             mkdir -p /home/circleci/SDET.git
             chmod 0700 /home/circleci/SDET.git
+            ls -ld /home/circleci  # Optional: Display permissions for debugging
 
       - run:
           name: Install Dependencies
