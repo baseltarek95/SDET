@@ -1,10 +1,29 @@
 version: 2.1
 
 jobs:
-  build:
+  test:
     docker:
-      - image: cimg/node:latest
+      - image: cypress/browsers:node14.17.0-chrome91-ff89
 
     steps:
       - checkout
-      # Add your build and test steps here
+      - run:
+          name: Install dependencies
+          command: npm install
+
+      - run:
+          name: Run NightwatchJS tests
+          command: npm test
+
+      - store_artifacts:
+          path: reports
+          destination: reports
+
+      - store_test_results:
+          path: reports
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
