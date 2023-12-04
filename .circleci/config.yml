@@ -15,14 +15,7 @@ jobs:
           name: Adjust Permissions
           command: |
             sudo chmod +w https://github.com/baseltarek95/
-            sudo mkdir /path/to/parent/directory/SDET.git
-
-      - run:
-          name: Create Directory
-          command: |
-            mkdir -p SDET.git
-            chmod 0700 SDET.git
-            ls -ld SDET.git  # Optional: Display permissions for debugging
+            sudo mkdir https://github.com/baseltarek95/SDET.git
 
       - run:
           name: Install Dependencies
