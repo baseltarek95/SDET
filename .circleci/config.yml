@@ -3,14 +3,14 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:20.10  # Update to the desired version or tag
+      - image: circleci/node:latest  # Use the latest version
 
     steps:
       - setup_remote_docker
       - checkout
       - run:
           name: Pull Docker image
-          command: docker pull circleci/node:20.10  # Update to the desired version or tag
+          command: docker pull circleci/node:latest
       - run:
           name: Install Dependencies
           command: npm install
