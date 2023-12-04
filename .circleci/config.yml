@@ -3,7 +3,13 @@ jobs:
   test:
     docker:
       - image: circleci/node:19.4
-      
+
+    steps:
+      - setup_remote_docker:
+          version: 20.10.8
+      - run:
+          name: Pull Docker image
+          command: docker pull circleci/node:19.4
     steps:
       - checkout
       - run:
