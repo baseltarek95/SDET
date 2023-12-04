@@ -11,7 +11,13 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
-      
+     
+      - run:
+        name: Create SDET.git Directory
+        command: |
+          mkdir -p /home/circleci/SDET.git
+          chmod 0700 /home/circleci/SDET.git
+          
       - run:
           name: Pull Docker image
           command: docker pull circleci/node:latest
