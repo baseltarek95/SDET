@@ -6,8 +6,7 @@ jobs:
       - image: circleci/node:19.4
 
     steps:
-      - setup_remote_docker:
-          version: 20.10.8
+      - setup_remote_docker
       - run:
           name: Pull Docker image
           command: docker pull circleci/node:19.4
