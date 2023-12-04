@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Create Directory and Adjust Permissions
           command: |
-            mkdir -p SDET.git
-            chmod 0700 SDET.git
-            ls -ld SDET.git  # Optional: Display permissions for debugging
+            sudo mkdir -p /path/to/SDET.git
+            sudo chmod 0700 /path/to/SDET.git
+            sudo ls -ld /path/to/SDET.git  # Optional: Display permissions for debugging
 
       - run:
           name: Install Dependencies
